@@ -1,6 +1,6 @@
 // import React, { useEffect, useState } from "react";
 import "../Allcss/Artist.css";
-import {  Tab, Tabs } from "react-bootstrap";
+import { Tab, Tabs } from "react-bootstrap";
 import ArtWorkTab from "../ArtistTab/ArtWorkTab";
 import OrderTab from "../ArtistTab/OrderTab";
 import ProfileTab from "../ArtistTab/ProfileTab";
@@ -10,19 +10,20 @@ import { useLocation } from "react-router-dom";
 const Artist = () => {
   const artistData = useLocation().state;
 
-  
   return (
     <div>
-     
       <div className="artist-container">
         <div className="profile-card">
           <div className="profile-header">
             <div className="main-profile">
-              <div className="profile-image"></div>
+              <img
+                className="profile-image"
+                src={`http://localhost:5000${artistData?.ArtistProfile}`}
+              ></img>
               <div className="profile-names">
                 <h1 className="username">
-                <h4>Name:{artistData?.ArtistName}</h4>
-               </h1>
+                  <h4>{artistData?.ArtistFullName}</h4>
+                </h1>
                 <small className="page-title"></small>
               </div>
             </div>
@@ -39,7 +40,7 @@ const Artist = () => {
               </Tab>
 
               <Tab eventKey="Profile" title="Profile">
-                <ProfileTab />
+                <ProfileTab data={artistData} />
               </Tab>
             </Tabs>
           </div>

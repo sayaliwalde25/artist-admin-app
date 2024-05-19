@@ -2,8 +2,11 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import '../Allcss/Artist.css'
+import { useLocation } from "react-router-dom";
+
 function ArtistsDetails() {
   const [Artist, setArtist] = useState([]);
+  const artistData = useLocation().state;
 
   useEffect(() => {
     axios
