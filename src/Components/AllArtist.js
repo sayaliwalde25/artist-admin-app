@@ -13,7 +13,7 @@ const AllArtists = () => {
   //  AllArtists
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/allartist")
+      .get("http://localhost:5000/artapi/allartists")
       .then((result) => {
         setallartists(result.data);
         // navigate("/")

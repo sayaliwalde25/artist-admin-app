@@ -12,7 +12,7 @@ const AllCustomers = () => {
   // AllCustomers
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/allcustomer")
+      .get("http://localhost:5000/artapi/allcustomers")
       .then((result) => {
         setallcustomers(result.data);
       })

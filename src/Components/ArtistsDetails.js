@@ -7,7 +7,7 @@ function ArtistsDetails() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/allartist")
+      .get("http://localhost:5000/artapi/allartists")
       .then((result) => {
         setArtist(result.data);
       })
