@@ -29,7 +29,7 @@
     /* width: clamp(428%, 990%, 990%); */
     width: 100vw;
     height: 670px;  
-    background-color: var(--primary-bg);
+    background-color:#AA7DCE;
     /* border-radius: 40px; */
     border: 2px solid var(--accent-bg);
     /* background-color: #CAF0F8; */
