@@ -1,11 +1,12 @@
-import logo from './logo.svg';
+import logo from "./logo.svg";
 // import './App.css';
-import ArtistRountes from './ArtistRountes';
-import 'bootstrap/dist/css/bootstrap.min.css'
+import "bootstrap/dist/css/bootstrap.min.css";
+import ArtistRoutes from "./ArtistRoutes";
+
 function App() {
   return (
     <div>
-      <ArtistRountes/>
+      <ArtistRoutes />
     </div>
   );
 }

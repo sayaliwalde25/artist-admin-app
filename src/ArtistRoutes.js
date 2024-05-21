@@ -1,13 +1,14 @@
 import React from "react";
-import ArtistNavBar from "./ArtistNavBar";
-import AllArtists from "./Components/AllArtist";
-import AllCustomers from "./Components/AllCustomer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ArtistNavBar from "./ArtistNavBar";
 import AdminDash from "./Components/AdminDash";
-import ArtistsDetails from "./Components/ArtistsDetails";
+import AllArtists from "./Components/AllArtists";
+import ArtistDetails from "./Components/ArtistDetails";
+import AllCustomers from "./Components/AllCustomers";
+import Customers from "./Components/Customers";
 import Artist from "./Components/Artist";
 
-function ArtistRountes() {
+const ArtistRoutes = () => {
   return (
     <div>
       <BrowserRouter>
@@ -15,13 +16,14 @@ function ArtistRountes() {
         <Routes>
           <Route path="/" element={<AdminDash />} />
           <Route path="/allartists" element={<AllArtists />} />
-          <Route path="/artisitsdetails" element={<ArtistsDetails />} />
+          <Route path="/artisitdetails" element={<ArtistDetails />} />
           <Route path="/allcustomers" element={<AllCustomers />} />
-          <Route path="/artist" element={<Artist/>}/>
+          <Route path="/customers" element={<Customers />} />
+          <Route path="/artist" element={<Artist />} />
         </Routes>
       </BrowserRouter>
     </div>
   );
-}
+};
 
-export default ArtistRountes;
+export default ArtistRoutes;
