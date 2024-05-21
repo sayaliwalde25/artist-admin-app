@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import ArtWorkTab from "../ArtistTab/ArtWorkTab";
 import OrderTab from "../ArtistTab/OrderTab";
 import ProfileTab from "../ArtistTab/ProfileTab";
+import '../CSS/Artist.css'
 
 const Artist = () => {
   const artistData = useLocation().state;
