@@ -1,6 +1,10 @@
 import React from "react";
-import { MdDashboard } from "react-icons/md";
 import "../CSS/AdminDash.css";
+import artist from "../images/icons8-artist-30.png";
+import artwork from "../images/icons8-artwork-64.png";
+import order from "../images/icons8-order-30.png";
+import customer from "../images/icons8-customer-50.png";
+import contact from "../images/icons8-contact-50.png";
 
 const AdminDash = () => {
   return (
@@ -15,35 +19,35 @@ const AdminDash = () => {
               <h3>Artist</h3>
               <h1>300</h1>
             </div>
-            <MdDashboard className="admin-card_icon" />
+            <img src={artist} className="admin-card_icon" />
           </div>
           <div className="admin-card">
             <div className="admin-card-inner">
               <h3>ArtWork</h3>
               <h1>106</h1>
             </div>
-            <MdDashboard className="admin-card_icon" />
+            <img src={artwork} className="admin-card_icon" />
           </div>
           <div className="admin-card">
             <div className="admin-card-inner">
               <h3>Order</h3>
               <h1>300</h1>
             </div>
-            <MdDashboard className="admin-card_icon" />
+            <img src={order} className="admin-card_icon" />
           </div>
           <div className="admin-card">
             <div className="admin-card-inner">
               <h3>Customer</h3>
               <h1>300</h1>
             </div>
-            <MdDashboard className="admin-card_icon" />
+            <img src={customer} className="admin-card_icon" />
           </div>
           <div className="admin-card">
             <div className="admin-card-inner">
               <h3>Contact</h3>
               <h1>14</h1>
             </div>
-            <MdDashboard className="admin-card_icon" />
+            <img src={contact} className="admin-card_icon" />
           </div>
         </div>
       </div>
