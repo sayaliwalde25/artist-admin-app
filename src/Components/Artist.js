@@ -12,14 +12,14 @@ const Artist = () => {
   return (
     <div>
       <div className="artist-container">
-        <div className="profile-card">
-          <div className="profile-header">
-            <div className="main-profile">
+        <div className="artist-card">
+          <div className="artist-header">
+            <div className="artist-profile">
               <img
-                className="profile-image"
+                className="artist-image"
                 src={`http://localhost:5000${artistData?.ArtistProfile}`}
               ></img>
-              <div className="profile-names">
+              <div className="artist-names">
                 <h1 className="username">
                   <h4>{artistData?.ArtistFullName}</h4>
                 </h1>

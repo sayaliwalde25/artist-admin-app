@@ -4,3 +4,22 @@
 .profile-p {
   color: #000;
 }
+.profile-div {
+  display: flex;
+  flex-direction: row;
+}
+.profile-card {
+  margin-left: 20px;
+  margin-right: 50px;
+  /* margin-bottom: 50px; */
+  height: 50%;
+  width: 35%;
+  padding: 5px 5px 5px 5px;
+}
+.profile-cards {
+  margin-left: 50px;
+  margin-right: 20px;
+  height: 50%;
+  width: 35%;
+  padding: 5px 5px 5px 5px;
+}
