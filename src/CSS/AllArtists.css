@@ -10,7 +10,7 @@
 .card-art:hover {
   height: 450px;
 }
-.imgBx {
+.allart-imgBx {
   position: absolute;
   left: 50%;
   top: -50px;
@@ -22,11 +22,11 @@
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
   overflow: hidden;
 }
-.card-art:hover .imgBx {
+.card-art:hover .allart-imgBx {
   width: 250px;
   height: 250px;
 }
-.imgBx img {
+.allart-imgBx img {
   position: absolute;
   top: 0;
   left: 0;
@@ -37,7 +37,7 @@
 .allart-title,.allart-text{
   color: #000;
 }
-.card-art .content {
+.card-art .allart-content {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -46,48 +46,48 @@
   align-items: flex-end;
   overflow: hidden;
 }
-.card-art .content .details {
+.card-art .allart-content .allart-details {
   padding: 40px;
   text-align: center;
   width: 100%;
   transition: 0.2s;
   transform: translateX(150px);
 }
-.card-art:hover .content .details {
+.card-art:hover .allart-content .allart-details {
   transform: translateY(0px);
 }
-.card-art .content .details h2 {
+.card-art .allart-content .allart-details h2 {
   font-size: 1.25rem;
   font-weight: 600;
   color: #555;
   line-height: 1.2em;
 }
-.card-art .content .details h2 span {
+.card-art .allart-content .allart-details h2 span {
   font-size: 0.75em;
   font-weight: 500;
   opacity: 0.5;
 }
-.card-art .content .details .data {
+.card-art .allart-content .allart-details .data {
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
 }
-.card-art .content .details .data h3 {
+.card-art .allart-content .allart-details .data h3 {
   font-size: 1em;
   color: #555;
   line-height: 1.2em;
   font-weight: 600;
 }
-.card-art .content .details .data h3 span {
+.card-art .allart-content .allart-details .data h3 span {
   font-size: 0.83em;
   font-weight: 400;
   opacity: 0.5;
 }
-.card-art .content .details .actionBtn {
+.card-art .allart-content .allart-details .actionBtn {
   display: flex;
   justify-content: space-between;
 }
-.card-art .content .details .actionBtn button {
+.card-art .allart-content .allart-details .actionBtn button {
   padding: 10px 30px;
   border-radius: 5px;
   border: none;
@@ -98,7 +98,7 @@
   color: #fff;
   cursor: pointer;
 }
-.card-art .content .details .actionBtn button:nth-child(2) {
+.card-art .allart-content .allart-details .actionBtn button:nth-child(2) {
   border: 1px solid #999;
   color: #999;
   background: #fff;

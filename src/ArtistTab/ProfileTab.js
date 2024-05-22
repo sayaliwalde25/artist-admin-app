@@ -1,6 +1,6 @@
 import React from "react";
 import "../CSS/ProfileTab.css";
-import { Card } from "react-bootstrap";
+import { Card, Col, Row } from "react-bootstrap";
 
 const ProfileTab = ({ data }) => {
   return (
@@ -10,27 +10,27 @@ const ProfileTab = ({ data }) => {
       <h4 className="profile-h4">ProfileTab</h4>
       <div className="profile-div">
         <Card className="profile-card">
-          <p className="profile-p">
-            Adhar Card Image:{" "}
-            <img src={`http://localhost:5000${data?.ArtistAdharCardImage}`} />
-          </p>
-          <p className="profile-p">
-            Handicap Certificate Image:{" "}
-            <img
+          <Row className="profile-p">
+            <Col>Adhar Card Image:{" "}</Col>
+            <Col> <img src={`http://localhost:5000${data?.ArtistAdharCardImage}`} /></Col>
+          </Row>
+          <Row className="profile-p">
+            <Col>  Handicap Certificate Image:</Col>
+            <Col>  <img
               src={`http://localhost:5000${data?.ArtistHandicapCertificateImage}`}
-            />
-          </p>
+            /></Col>
+          </Row>
         </Card>
         <Card className="profile-cards">
-          <p className="profile-p">Name: {data?.ArtistFullName}</p>
-          <p className="profile-p">Address: {data?.ArtistAddress}</p>
-          <p className="profile-p">City: {data?.ArtistCity}</p>
-          <p className="profile-p">Mobile No: {data?.ArtistMobileNo}</p>
-          <p className="profile-p">Email: {data?.ArtistEmail}</p>
-          <p className="profile-p">State: {data?.ArtistState}</p>
-          <p className="profile-p">Pin Code: {data?.ArtistPincode}</p>
-          <p className="profile-p">Adhar Card No: {data?.ArtistAdharCardNo}</p>
-          <p className="profile-p">IsVerified: {data?.IsVerified}</p>
+          <p className="profile-p"><span>Name:</span> {data?.ArtistFullName}</p>
+          <p className="profile-p"><span>Address:</span>{data?.ArtistAddress}</p>
+          <p className="profile-p"><span>City:</span> {data?.ArtistCity}</p>
+          <p className="profile-p"><span>Mobile No: </span>{data?.ArtistMobileNo}</p>
+          <p className="profile-p"><span>Email:</span> {data?.ArtistEmail}</p>
+          <p className="profile-p"><span>State:</span> {data?.ArtistState}</p>
+          <p className="profile-p"><span>Pin Code: </span>{data?.ArtistPincode}</p>
+          <p className="profile-p"><span>Adhar Card No:</span> {data?.ArtistAdharCardNo}</p>
+          <p className="profile-p"><span>IsVerified: </span>{data?.IsVerified}</p>
         </Card>
       </div>
     </div>

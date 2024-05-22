@@ -38,8 +38,8 @@ const AllArtists = () => {
                       src={`http://localhost:5000${artist.ArtistProfile}`}
                     />
                   </div>
-                  <div className="content">
-                    <div className="details">
+                  <div className="allart-content">
+                    <div className="allart-details">
                       <Card.Title className="allart-title">{artist.ArtistFullName}</Card.Title>
                       <Card.Body>
                         <Card.Text className="allart-text">{artist.ArtistEmail}</Card.Text>

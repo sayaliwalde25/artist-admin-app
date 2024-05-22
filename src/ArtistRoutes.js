@@ -7,6 +7,7 @@ import ArtistDetails from "./Components/ArtistDetails";
 import AllCustomers from "./Components/AllCustomers";
 import Customers from "./Components/Customers";
 import Artist from "./Components/Artist";
+import OrderDetails from "./ArtistTab/OrderDetails";
 
 const ArtistRoutes = () => {
   return (
@@ -18,6 +19,7 @@ const ArtistRoutes = () => {
           <Route path="/allartists" element={<AllArtists />} />
           <Route path="/artisitdetails" element={<ArtistDetails />} />
           <Route path="/allcustomers" element={<AllCustomers />} />
+          <Route path="/orderdetails" element={<OrderDetails />} />
           <Route path="/customers" element={<Customers />} />
           <Route path="/artist" element={<Artist />} />
         </Routes>
