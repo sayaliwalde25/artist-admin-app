@@ -5,7 +5,7 @@
   /* box-sizing: border-box; */
   font-family: "Playfair Display", serif;
 }
-.nav-bar {
+.artnav-bar {
   margin: 0;
   background: #57cc99;
   height: 10%;
@@ -15,4 +15,18 @@
   justify-content: center;
   z-index: 999;
   top: 0;
+}
+.artnav-nav {
+  margin-left: 50px;
+}
+.artnav-link {
+  text-decoration: none;
+  color: #000;
+  gap: 50px;
+}
+.artnav-div {
+  transition: transform 0.4s;
+}
+.artnav-div:hover {
+  transform: scale(1.1);
 }

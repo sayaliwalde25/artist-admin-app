@@ -1,26 +1,26 @@
-.cust-container {
+.allcust-container {
   width: 302px;
   height: 299px;
   margin: 10px;
   float: left;
 }
-.cust-img {
+.allcust-img {
   /* border-radius: 10px; */
   height: 300px;
   width: 300px;
 }
-.cust-text {
+.allcust-text {
   /* position: absolute; */
   top: 50px;
   font-size: 15px;
 }
-.cust-title {
+.allcust-title {
   /* position: absolute; */
   /* padding: 10px; */
   /* top: 200px; */
   color: #000;
 }
-.cust-container > .cust-front {
+.allcust-container > .allcust-front {
   position: absolute;
   transform: perspective(600px) rotateY(0deg);
   width: 302px;
@@ -28,7 +28,7 @@
   backface-visibility: hidden;
   transition: transform 0.5s linear 0s;
 }
-.cust-container > .cust-back {
+.allcust-container > .allcust-back {
   position: absolute;
   transform: perspective(600px) rotateY(180deg);
   background: #3f3885;
@@ -40,9 +40,9 @@
   backface-visibility: hidden;
   transition: transform 0.5s linear 0s;
 }
-.cust-container:hover > .cust-front {
+.allcust-container:hover > .allcust-front {
   transform: perspective(600px) rotateY(-180deg);
 }
-.cust-container:hover > .cust-back {
+.allcust-container:hover > .allcust-back {
   transform: perspective(600px) rotateY(0deg);
 }

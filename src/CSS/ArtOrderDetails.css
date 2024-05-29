@@ -1,0 +1,23 @@
+.artorderdetails-span {
+  font-weight: bold;
+}
+.artorderdetails-div {
+  /* margin-bottom: 200px; */
+}
+.artorderdetatils-div .artorderdetails-span {
+  margin-left: 140px;
+}
+.artorderdetails-divv {
+  border: 0.96px solid gray;
+}
+.artorderdetails-card {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 155px;
+  margin-left: 120px;
+}
+.artorderdetails-img {
+  width: 80px;
+  height: 80px;
+}

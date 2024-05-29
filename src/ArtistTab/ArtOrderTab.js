@@ -2,21 +2,21 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Card, Col, Container, Modal, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import "../CSS/OrderTab.css";
+import "../CSS/ArtOrderTab.css";
 
-const OrderTab = () => {
-  // AllOrders
-  const [AllOrders, setAllOrders] = useState([]);
+const ArtOrderTab = () => {
+  // ArtOrders
+  const [ArtOrders, setArtOrders] = useState([]);
   const [onShowDelete, setonShowDelete] = useState(false);
 
   const navigator = useNavigate();
 
-  // AlllOrders
+  // ArtOrders
   useEffect(() => {
     axios
       .get("http://localhost:5000/artapi/allorders")
       .then((result) => {
-        setAllOrders(result.data);
+        setArtOrders(result.data);
       })
       .catch((err) => {
         console.log(err);
@@ -29,32 +29,32 @@ const OrderTab = () => {
       {/* AllOrders */}
       <Container>
         <Row>
-          {AllOrders.map((order) => {
+          {ArtOrders.map((order) => {
             return (
               <Col sm={12} md={6} lg={4}>
-                <Card className="ordertab-card">
-                  <Card.Body className="ordertab-body">
-                    <Card.Text className="ordertab-text">
+                <Card className="artordertab-card">
+                  <Card.Body className="artordertab-body">
+                    <Card.Text className="artordertab-text">
                       Date:{order.OrderDate}
                     </Card.Text>
-                    <Card.Text className="ordertab-text">
-                      Status:{order.OrdererStatus}
+                    <Card.Text className="artordertab-text">
+                      Status:{order.OrderStatus}
                     </Card.Text>
-                    <Card.Text className="ordertab-text">
+                    <Card.Text className="artordertab-text">
                       Total:{order.OrderTotalAmount}
                     </Card.Text>
                   </Card.Body>
-                  <div className="ordertab-div">
+                  <div className="artordertab-div">
                     <button
-                      className="ordertab-button"
+                      className="artordertab-button"
                       onClick={() =>
-                        navigator("/orderdetails", { state: order })
+                        navigator("/artorderdetails", { state: order })
                       }
                     >
                       OrderDetails
                     </button>
                     <button
-                      className="order-button"
+                      className="artorder-button"
                       onClick={() => {
                         onShowDelete(true);
                       }}
@@ -91,4 +91,4 @@ const OrderTab = () => {
   );
 };
 
-export default OrderTab;
+export default ArtOrderTab;

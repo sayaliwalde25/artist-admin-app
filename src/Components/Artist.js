@@ -2,15 +2,15 @@ import React from "react";
 import { Tab, Tabs } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 import ArtWorkTab from "../ArtistTab/ArtWorkTab";
-import OrderTab from "../ArtistTab/OrderTab";
-import ProfileTab from "../ArtistTab/ProfileTab";
+import ArtOrderTab from "../ArtistTab/ArtOrderTab";
+import ArtProfileTab from "../ArtistTab/ArtProfileTab";
 import '../CSS/Artist.css'
 
 const Artist = () => {
   const artistData = useLocation().state;
 
   return (
-    <div>
+    <div style={{marginTop:'110px'}}>
       <div className="artist-container">
         <div className="artist-card">
           <div className="artist-header">
@@ -35,11 +35,11 @@ const Artist = () => {
               </Tab>
 
               <Tab eventKey="Order" title="Order">
-                <OrderTab />
+                <ArtOrderTab />
               </Tab>
 
               <Tab eventKey="Profile" title="Profile">
-                <ProfileTab data={artistData} />
+                <ArtProfileTab data={artistData} />
               </Tab>
             </Tabs>
           </div>
