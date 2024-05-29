@@ -25,63 +25,71 @@ const AllArtists = () => {
   }, []);
 
   return (
-    <div className="main">
-      <h2>all artists</h2>
-      <Container>
-        <Row>
-          {allArtists.map((artist) => {
-            return (
-              <Col>
-                <div className="card-art">
-                  <div className="imgBx">
-                    <Card.Img
-                      src={`http://localhost:5000${artist.ArtistProfile}`}
-                    />
-                  </div>
-                  <div className="content">
-                    <div className="details">
-                      <Card.Title className="allart-title">{artist.ArtistFullName}</Card.Title>
-                      <Card.Body>
-                        <Card.Text className="allart-text">{artist.ArtistEmail}</Card.Text>
-                        <Card.Text className="allart-text">{artist.ArtistAddress}</Card.Text>
-                        <Card.Text className="allart-text">{artist.ArtistCity}</Card.Text>
-                        <Card.Text className="allart-text">{artist.ArtistMobile}</Card.Text>
-                      </Card.Body>
-                      <Card.Footer>
-                        <button
-                          onClick={() => navigate("/artist", { state: artist })}
-                        >
-                          Artist details
-                        </button>
-                      </Card.Footer>
+    <div style={{ marginTop: "80px" }}>
+      <div className="main">
+        <h2>All Artists</h2>
+        <Container>
+          <Row>
+            {allArtists.map((artist) => {
+              return (
+                <Col>
+                  <div className="allart-div">
+                    <div className="allart-img">
+                      <Card.Img
+                        className="allart-image"
+                        src={`http://localhost:5000${artist.ArtistProfile}`}
+                      />
+                    </div>
+                    <div className="allart-content">
+                      <div className="allart-details">
+                        <h2 className="allart-title">
+                          <span className="allart-span">
+                            {artist.ArtistFullName}
+                          </span>
+                        </h2>
+                        <Card.Body className="allart-body">
+                          <h3 className="allart-text">
+                            <span className="allart-spans">
+                              {artist.ArtistEmail}
+                            </span>
+                          </h3>
+                          <h3 className="allart-text">
+                            <span className="allart-spans">
+                              {" "}
+                              {artist.ArtistAddress}
+                            </span>
+                          </h3>
+                          <h3 className="allart-text">
+                            <span className="allart-spans">
+                              {artist.ArtistCity}
+                            </span>
+                          </h3>
+                          <h3 className="allart-text">
+                            <span className="allart-spans">
+                              {" "}
+                              {artist.ArtistMobile}
+                            </span>
+                          </h3>
+                        </Card.Body>
+                        <Card.Footer className="actionBtn">
+                          <button
+                            className="allart-button"
+                            onClick={() =>
+                              navigate("/artist", { state: artist })
+                            }
+                          >
+                            Artist details
+                          </button>
+                        </Card.Footer>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </Col>
-            );
-          })}
-        </Row>
-        {/* <Row>
-            {allartists.map((art)=> {
-              return(
-                <Col sm={12} md={4} lg={2}>
-                  <Card>
-                    <Card.Img src={img1}/>
-                     <Card.Title>{art.ArtistName}</Card.Title>
-                     <Card.Body>
-                      <Card.Text>{art.ArtistEmail}</Card.Text>
-                      <Card.Subtitle>{art.ArtistMobile}</Card.Subtitle>
-                     </Card.Body>
-                     <Card.Footer>
-                      <button> Update</button>
-                      <button> Delete</button>
-                    </Card.Footer>
-                  </Card>
                 </Col>
-              )
+              );
             })}
-          </Row> */}
-      </Container>
+          </Row>
+        </Container>
+      </div>
     </div>
   );
 };

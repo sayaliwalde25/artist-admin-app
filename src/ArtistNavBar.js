@@ -6,20 +6,26 @@ import "./CSS/ArtistNavBar.css";
 const ArtistNavBar = () => {
   return (
     <div>
-      <Navbar className="nav-bar" expand="lg">
+      <Navbar className="artnav-bar" expand="lg">
         <Container>
           <Navbar.Brand>Artist</Navbar.Brand>
           <Navbar.Toggle aria-controls="nav-bar" />
           <Navbar.Collapse id="nav-bar">
-            <Nav>
+            <Nav className="artnav-nav">
               <Nav.Link>
-                <Link to="/">DashBoard</Link>
+                <Link className="artnav-link" to="/">
+                  <div className="artnav-div">DashBoard</div>
+                </Link>
               </Nav.Link>
               <Nav.Link>
-                <Link to="/customers">AllCustomers</Link>
+                <Link className="artnav-link" to="/customers">
+                  <div className="artnav-div">AllCustomers</div>
+                </Link>
               </Nav.Link>
               <Nav.Link>
-                <Link to="/allartists">AllArtists</Link>
+                <Link className="artnav-link" to="/allartists">
+                  <div className="artnav-div">AllArtists</div>
+                </Link>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

@@ -34,6 +34,7 @@
 }
 .admin-card:first-child {
   background: #ffc8dd;
+  /* height: 150px; */
 }
 .admin-card:nth-child(2) {
   background: #6ca1cd;
@@ -51,11 +52,13 @@
   background: #d50000, #b1b69f;
 }
 
-/* .card-inner{
+.admin-card-inner{
     display: flex;
     align-items: center;
     justify-content: space-between;
-} */
-/* .card-inner > .card_icon {
-    font-size: 25px;
-} */
+}
+.admin-card_icon{
+  margin-top: 70px;
+  height: 20px;
+  width: 20px;
+}

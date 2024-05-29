@@ -1,4 +1,4 @@
-.card-art {
+.allart-div {
   position: relative;
   width: 350px;
   height: 190px;
@@ -7,10 +7,10 @@
   box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
   transition: 0.5s;
 }
-.card-art:hover {
-  height: 450px;
+.allart-div:hover {
+  height: 420px;
 }
-.imgBx {
+.allart-img {
   position: absolute;
   left: 50%;
   top: -50px;
@@ -22,11 +22,11 @@
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
   overflow: hidden;
 }
-.card-art:hover .imgBx {
+.allart-div:hover .allart-img {
   width: 250px;
   height: 250px;
 }
-.imgBx img {
+.allart-img .allart-image {
   position: absolute;
   top: 0;
   left: 0;
@@ -34,10 +34,7 @@
   height: 100%;
   object-fit: cover;
 }
-.allart-title,.allart-text{
-  color: #000;
-}
-.card-art .content {
+.allart-div .allart-content {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -45,51 +42,59 @@
   justify-content: center;
   align-items: flex-end;
   overflow: hidden;
+  /* margin-bottom: 80%; */
 }
-.card-art .content .details {
+.allart-div .allart-content .allart-details {
   padding: 40px;
   text-align: center;
   width: 100%;
   transition: 0.2s;
   transform: translateX(150px);
 }
-.card-art:hover .content .details {
+.allart-div:hover .allart-content .allart-details {
   transform: translateY(0px);
 }
-.card-art .content .details h2 {
+.allart-div .allart-content .allart-details .allart-title {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #555;
   line-height: 1.2em;
 }
-.card-art .content .details h2 span {
+.allart-div .allart-content .allart-details .allart-title .allart-span {
+  color: #000;
   font-size: 0.75em;
   font-weight: 500;
-  opacity: 0.5;
+  /* opacity: 0.5; */
 }
-.card-art .content .details .data {
+/* .allart-div .allart-content .allart-details .allart-body {
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
-}
-.card-art .content .details .data h3 {
+} */
+/* .allart-div .allart-content .allart-details .data h3 {
   font-size: 1em;
   color: #555;
   line-height: 1.2em;
   font-weight: 600;
+} */
+.allart-div .allart-content .allart-details .allart-body .allart-text {
+  font-size: 1em;
+  line-height: 1.2em;
+  font-weight: 600;
 }
-.card-art .content .details .data h3 span {
+.allart-div .allart-content .allart-details .allart-body .allart-spans {
   font-size: 0.83em;
   font-weight: 400;
-  opacity: 0.5;
+  /* opacity: 0.5; */
+  color: #000;
 }
-.card-art .content .details .actionBtn {
+.allart-div .allart-content .allart-details .actionBtn {
   display: flex;
   justify-content: space-between;
 }
-.card-art .content .details .actionBtn button {
+.allart-div .allart-content .allart-details .actionBtn .allart-button {
   padding: 10px 30px;
   border-radius: 5px;
+  margin-left: 50px;
   border: none;
   outline: none;
   font-size: 1em;
@@ -98,7 +103,7 @@
   color: #fff;
   cursor: pointer;
 }
-.card-art .content .details .actionBtn button:nth-child(2) {
+.allart-div .allart-content .allart-details .actionBtn .allart-button:nth-child(2) {
   border: 1px solid #999;
   color: #999;
   background: #fff;

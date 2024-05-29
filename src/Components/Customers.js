@@ -20,15 +20,15 @@ const Customers = () => {
   }, []);
 
   return (
-    <div>
+    <div style={{ marginTop: "80px" }}>
       <h6>Customers</h6>
       <Container>
         <Row>
           {allCustomers.map((cust) => {
             return (
               <Col sm={12} md={8} lg={4}>
-                <div className="cust-container">
-                  <Card className="cust-back">
+                <div className="allcust-container">
+                  <Card className="allcust-back">
                     <Card.Body>
                       <Card.Text className="cust-text">
                         Mobile No: {cust.CustomerMobileNo}
@@ -47,14 +47,14 @@ const Customers = () => {
                       <button>Delete</button>
                     </Card.Footer>
                   </Card>
-                  <Card className="cust-front">
-                    <div className="cust-image">
+                  <Card className="allcust-front">
+                    <div className="allcust-image">
                       <Card.Img
-                        className="cust-img"
+                        className="allcust-img"
                         src={`http://localhost:5000${cust.CustomerProfile}`}
                       />
-                      <Card.Footer className="cust-foot">
-                        <Card.Title className="cust-title">
+                      <Card.Footer className="allcust-foot">
+                        <Card.Title className="allcust-title">
                           Name: {cust.CustomerName}
                         </Card.Title>
                       </Card.Footer>

@@ -1,11 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
+  /* margin: 0; */
+  /* padding: 0; */
+  /* box-sizing: border-box; */
+  font-family: "Playfair Display", serif;
 }
-.nav-bar {
+.artnav-bar {
+  margin: 0;
   background: #57cc99;
   height: 10%;
   width: 100vw;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  top: 0;
+}
+.artnav-nav {
+  margin-left: 50px;
+}
+.artnav-link {
+  text-decoration: none;
+  color: #000;
+  gap: 50px;
+}
+.artnav-div {
+  transition: transform 0.4s;
+}
+.artnav-div:hover {
+  transform: scale(1.1);
 }

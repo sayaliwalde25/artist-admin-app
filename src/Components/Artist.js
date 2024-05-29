@@ -2,24 +2,24 @@ import React from "react";
 import { Tab, Tabs } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 import ArtWorkTab from "../ArtistTab/ArtWorkTab";
-import OrderTab from "../ArtistTab/OrderTab";
-import ProfileTab from "../ArtistTab/ProfileTab";
+import ArtOrderTab from "../ArtistTab/ArtOrderTab";
+import ArtProfileTab from "../ArtistTab/ArtProfileTab";
 import '../CSS/Artist.css'
 
 const Artist = () => {
   const artistData = useLocation().state;
 
   return (
-    <div>
+    <div style={{marginTop:'110px'}}>
       <div className="artist-container">
-        <div className="profile-card">
-          <div className="profile-header">
-            <div className="main-profile">
+        <div className="artist-card">
+          <div className="artist-header">
+            <div className="artist-profile">
               <img
-                className="profile-image"
+                className="artist-image"
                 src={`http://localhost:5000${artistData?.ArtistProfile}`}
               ></img>
-              <div className="profile-names">
+              <div className="artist-names">
                 <h1 className="username">
                   <h4>{artistData?.ArtistFullName}</h4>
                 </h1>
@@ -35,11 +35,11 @@ const Artist = () => {
               </Tab>
 
               <Tab eventKey="Order" title="Order">
-                <OrderTab />
+                <ArtOrderTab />
               </Tab>
 
               <Tab eventKey="Profile" title="Profile">
-                <ProfileTab data={artistData} />
+                <ArtProfileTab data={artistData} />
               </Tab>
             </Tabs>
           </div>
