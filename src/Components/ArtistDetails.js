@@ -1,12 +1,10 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
-import '../Allcss/Artist.css'
-import { useLocation } from "react-router-dom";
+import "../CSS/Artist.css";
 
-function ArtistsDetails() {
+function ArtistDetails() {
   const [Artist, setArtist] = useState([]);
-  const artistData = useLocation().state;
 
   useEffect(() => {
     axios
@@ -21,13 +19,13 @@ function ArtistsDetails() {
 
   return (
     <div>
-      <h1>ArtistsDetails</h1>
+      <h1>ArtistDetails</h1>
       <div>
         <Row>
           {Artist.map((data) => {
             return (
               <Col sm={12} md={9} lg={3}>
-                <p>Name:{data.ArtistName}</p>
+                <p>Name:{data.ArtistFullName}</p>
                 <p>Email:{data.ArtistEmail}</p>
                 <p>Address:{data.ArtistAddress}</p>
                 <p>City:{data.ArtistCity}</p>
@@ -41,4 +39,4 @@ function ArtistsDetails() {
   );
 }
 
-export default ArtistsDetails;
+export default ArtistDetails;

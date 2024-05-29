@@ -1,20 +1,19 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
-import img2 from "../images/art1.jpg";
-import '../Allcss/Allcustomer.css'
+// import img2 from "../images/art1.jpg";
+import "../CSS/AllCustomers.css";
 
 const AllCustomers = () => {
   // AllCustomers
-  const [allcustomers, setallcustomers] = useState([]);
-
+  const [allCustomers, setallCustomers] = useState([]);
 
   // AllCustomers
   useEffect(() => {
     axios
       .get("http://localhost:5000/artapi/allcustomers")
       .then((result) => {
-        setallcustomers(result.data);
+        setallCustomers(result.data);
       })
       .catch((err) => {
         console.log(err);
@@ -26,29 +25,29 @@ const AllCustomers = () => {
       <h2>allcustomers</h2>
       <Container>
         <Row>
-          {allcustomers.map((cust) => {
+          {allCustomers.map((cust) => {
             return (
               <Col>
                 <div className="card-art">
                   <div className="imgBx">
-                    <Card.Img src={img2} />
+                    <Card.Img
+                      src={`http://localhost:5000${cust.CustomerProfile}`}
+                    />
                   </div>
                   <div className="content">
                     <div className="details">
-                      <Card.Title>{cust. CustomerName}</Card.Title>
+                      <Card.Title className="allcust-title">{cust.CustomerName}</Card.Title>
                       <div className="data">
                         <Card.Body>
-                          <Card.Text>{cust.CustomerMobileNo}</Card.Text>
-                          <Card.Text>{cust.CustomerAddress}</Card.Text>
-                          <Card.Text>{cust.CustomerCity}</Card.Text>
-                          <Card.Text>{cust.CustomerEmail}</Card.Text>
+                          <Card.Text className="allcust-text">{cust.CustomerMobileNo}</Card.Text>
+                          <Card.Text className="allcust-text">{cust.CustomerAddress}</Card.Text>
+                          <Card.Text className="allcust-text">{cust.CustomerCity}</Card.Text>
+                          <Card.Text className="allcust-text">{cust.CustomerEmail}</Card.Text>
                         </Card.Body>
                       </div>
                       <div>
                         <Card.Footer>
-                          <button >
-                            Delete
-                          </button> 
+                          <button>Delete</button>
                         </Card.Footer>
                       </div>
                     </div>

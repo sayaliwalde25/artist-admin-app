@@ -1,11 +1,10 @@
-// import React, { useEffect, useState } from "react";
-import "../Allcss/Artist.css";
+import React from "react";
 import { Tab, Tabs } from "react-bootstrap";
+import { useLocation } from "react-router-dom";
 import ArtWorkTab from "../ArtistTab/ArtWorkTab";
 import OrderTab from "../ArtistTab/OrderTab";
 import ProfileTab from "../ArtistTab/ProfileTab";
-import { useLocation } from "react-router-dom";
-// import axios from "axios";
+import '../CSS/Artist.css'
 
 const Artist = () => {
   const artistData = useLocation().state;
