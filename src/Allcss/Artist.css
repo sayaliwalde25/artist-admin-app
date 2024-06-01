@@ -1,0 +1,76 @@
+:root {
+    --primary-bg: #171717;
+    --secondary-bg: #262626;
+    --accent-bg: #4f46e5;
+
+    --primary-color: #fff;
+    --secondary-color: rgba(255,255,255, 70%);
+    --accent-color: #818cf8;
+
+    --border-color: rgba(255,255,255, 30%);
+    
+    --username-size: 32px;
+    --title-size: 28px;
+    --subtitle: 24px;
+}
+
+.artist-container {
+    height: 82vh;
+    backdrop-filter: blur(20px);
+    display: flex;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    /* margin: 30px; */
+    margin-top: 50px;
+}
+
+.profile-card {
+    /* width: clamp(428%, 990%, 990%); */
+    width: 100vw;
+    height: 670px;  
+    background-color:#AA7DCE;
+    /* border-radius: 40px; */
+    border: 2px solid var(--accent-bg);
+    /* background-color: #CAF0F8; */
+
+    display: grid;
+    grid-template-rows: 220px auto;
+    overflow: auto;
+}
+/* ------ profile header section */
+.profile-header {
+    background: url('../images/flo.jpg') center;
+    background-size: cover;
+    margin: 10px;
+    border-radius: 30px 30px 0 0;
+    position: relative;
+}
+    .main-profile {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        inset: calc(100% - 75px) auto auto 70px;
+    }
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            background: url('../images/card2.jpg') center;
+            background-size: cover;
+            border-radius: 50%;
+            border: 10px solid var(--primary-bg);
+        }
+        .profile-names {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: var(--primary-color);
+            background-color: var(--primary-bg);
+            padding: 10px 30px;
+            border-radius: 0 50px 50px 0;
+            transform: translateX(-10px);
+        }
+            .page-title {
+                color: var(--secondary-color);
+            }
+
