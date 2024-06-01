@@ -9,7 +9,7 @@ import contact from "../images/icons8-contact-50.png";
 
 const AdminDash = () => {
   return (
-    <div style={{ marginTop: "20px" }}>
+    <div style={{ marginTop: "50px" }}>
       {/* <Audio
         height="80"
         width="80"

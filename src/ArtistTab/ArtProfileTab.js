@@ -13,14 +13,12 @@ const ArtProfileTab = ({ data }) => {
           <Row className="profile-p">
             <Col>Adhar Card Image: </Col>
             <Col>
-              {" "}
               <img src={`http://localhost:5000${data?.ArtistAdharCardImage}`} />
             </Col>
           </Row>
           <Row className="profile-p">
             <Col> Handicap Certificate Image:</Col>
             <Col>
-              {" "}
               <img
                 src={`http://localhost:5000${data?.ArtistHandicapCertificateImage}`}
               />
@@ -29,31 +27,31 @@ const ArtProfileTab = ({ data }) => {
         </Card>
         <Card className="profile-cards">
           <p className="profile-p">
-            <span>Name:</span> {data?.ArtistFullName}
+            <span>Name: </span> {data?.ArtistFullName}
           </p>
           <p className="profile-p">
-            <span>Address:</span>
+            <span>Address: </span>
             {data?.ArtistAddress}
           </p>
           <p className="profile-p">
-            <span>City:</span> {data?.ArtistCity}
+            <span>City: </span> {data?.ArtistCity}
           </p>
           <p className="profile-p">
             <span>Mobile No: </span>
             {data?.ArtistMobileNo}
           </p>
           <p className="profile-p">
-            <span>Email:</span> {data?.ArtistEmail}
+            <span>Email: </span> {data?.ArtistEmail}
           </p>
           <p className="profile-p">
-            <span>State:</span> {data?.ArtistState}
+            <span>State: </span> {data?.ArtistState}
           </p>
           <p className="profile-p">
             <span>Pin Code: </span>
             {data?.ArtistPincode}
           </p>
           <p className="profile-p">
-            <span>Adhar Card No:</span> {data?.ArtistAdharCardNo}
+            <span>Adhar Card No: </span> {data?.ArtistAdharCardNo}
           </p>
           <p className="profile-p">
             <span>IsVerified: </span>

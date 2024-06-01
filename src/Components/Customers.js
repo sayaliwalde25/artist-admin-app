@@ -53,12 +53,10 @@ const Customers = () => {
                         className="allcust-img"
                         src={`http://localhost:5000${cust.CustomerProfile}`}
                       />
-                      <Card.Footer className="allcust-foot">
-                        <Card.Title className="allcust-title">
-                          Name: {cust.CustomerName}
-                        </Card.Title>
-                      </Card.Footer>
                     </div>
+                      <Card.Title className="allcust-title">
+                        Name: {cust.CustomerName}
+                      </Card.Title>
                   </Card>
                 </div>
               </Col>

@@ -4,13 +4,13 @@ import { useLocation } from "react-router-dom";
 import ArtWorkTab from "../ArtistTab/ArtWorkTab";
 import ArtOrderTab from "../ArtistTab/ArtOrderTab";
 import ArtProfileTab from "../ArtistTab/ArtProfileTab";
-import '../CSS/Artist.css'
+import "../CSS/Artist.css";
 
 const Artist = () => {
   const artistData = useLocation().state;
 
   return (
-    <div style={{marginTop:'110px'}}>
+    <div style={{marginTop:'130px'}}>
       <div className="artist-container">
         <div className="artist-card">
           <div className="artist-header">
