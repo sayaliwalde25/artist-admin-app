@@ -1,31 +1,35 @@
-.ArtProfileTab{
+.artprofiletab-h4 {
+  color: #000;
+  font-weight: 500;
+  margin: 30px 50px;
+}
+.artprofiletab-p {
+  color: #039ce8;
+}
+.artprofiletab-div {
   display: flex;
   width: 100%;
   height: 100%;
 }
-
-.ArtPofileTab-container{
-  width: 250px;
-  height: 350px;
-  position: relative;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50% , -50%);
-  perspective: 1000px;
+.artprofiletab-card {
+  margin-left: 20px;
+  margin-right: 50px;
+  
+  /* margin-bottom: 50px; */
+  height: 50%;
+  width: 40%;
+  padding: 30px;
 }
-.ArtPofileTab-cover{
-     width: 210px;
-    height: 100%;
-    position: absolute;
-    left: 40px;
-    background-color: #345b8c;
-    transform: rotateY(0deg);
-    transform-style: preserve-3d;
-    transform-origin: left;
-    transition: all .5s ease-in;
+.artprofiletab-cards {
+  margin-left: 50px;
+  margin-right: 20px;
+  height: 50%;
+  width: 35%;
+  padding: 50px;
 }
-.ArtPofileTab-container:hover .ArtPofileTab-cover{
-  transform: rotateY(-180deg);
+.artprofiletab-p span{
+  font-weight: 600;
+  color: black !important;
 }
 
 

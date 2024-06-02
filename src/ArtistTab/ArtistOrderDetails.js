@@ -34,7 +34,7 @@ const ArtOrderDetails = () => {
         </span>
         {orderData._id}
       </p>
-      <div>
+      <div> 
         <div>
           <h6>User Name: {orderData?.CustId?.UserName}</h6>
           <h6>User Email: {orderData?.CustId?.UserEmail}</h6>

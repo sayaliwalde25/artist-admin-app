@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import "./CSS/ArtistNavBar.css";
+import "../CSS/ArtistNavBar.css";
 
 const ArtistNavBar = () => {
   return (

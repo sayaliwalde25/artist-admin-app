@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 // import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
-import ArtistRoutes from "./ArtistRoutes";
+import ArtistRoutes from "./Components/ArtistRoutes";
 
 function App() {
   return (

@@ -5,20 +5,10 @@ import artwork from "../images/icons8-artwork-64.png";
 import order from "../images/icons8-order-30.png";
 import customer from "../images/icons8-customer-50.png";
 import contact from "../images/icons8-contact-50.png";
-// import { Audio } from "react-loader-spinner";
 
 const AdminDash = () => {
   return (
-    <div style={{ marginTop: "20px" }}>
-      {/* <Audio
-        height="80"
-        width="80"
-        radius="9"
-        color="green"
-        ariaLabel="loading"
-        wrapperStyle
-        wrapperClass
-      /> */}
+    <div style={{ marginTop: "50px" }}>
       <div className="admin-container">
         <div className="admin-title">
           <h3>Dashboard</h3>
