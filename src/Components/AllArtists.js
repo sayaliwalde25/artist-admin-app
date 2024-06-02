@@ -42,36 +42,34 @@ const AllArtists = () => {
                     </div>
                     <div className="allart-content">
                       <div className="allart-details">
-                        <h2 className="allart-title">
-                          <span className="allart-span">
+                        <h2 className="allart-h2">
+                          <Card.Subtitle className="allart-subtitle">
                             {artist.ArtistFullName}
-                          </span>
+                          </Card.Subtitle>
                         </h2>
                         <Card.Body className="allart-body">
-                          <h3 className="allart-text">
-                            <span className="allart-spans">
+                          <h3 className="allart-h3">
+                            <Card.Text className="allart-text">
                               {artist.ArtistEmail}
-                            </span>
+                            </Card.Text>
                           </h3>
-                          <h3 className="allart-text">
-                            <span className="allart-spans">
-                              {" "}
+                          <h3 className="allart-h3">
+                            <Card.Text className="allart-text">
                               {artist.ArtistAddress}
-                            </span>
+                            </Card.Text>
                           </h3>
-                          <h3 className="allart-text">
-                            <span className="allart-spans">
+                          <h3 className="allart-h3">
+                            <Card.Text className="allart-text">
                               {artist.ArtistCity}
-                            </span>
+                            </Card.Text>
                           </h3>
-                          <h3 className="allart-text">
-                            <span className="allart-spans">
-                              {" "}
+                          <h3 className="allart-h3">
+                            <Card.Text className="allart-text">
                               {artist.ArtistMobile}
-                            </span>
+                            </Card.Text>
                           </h3>
                         </Card.Body>
-                        <Card.Footer className="actionBtn">
+                        <Card.Footer className="allart-footer">
                           <button
                             className="allart-button"
                             onClick={() =>

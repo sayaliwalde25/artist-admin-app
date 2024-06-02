@@ -1,18 +1,18 @@
-.profile-h4 {
+.artprofiletab-h4 {
   color: #000;
   font-weight: 500;
   margin: 30px 50px;
 }
-.profile-p {
+.artprofiletab-p {
   color: #039ce8;
 }
-.profile-div {
+.artprofiletab-div {
   display: flex;
   flex-direction: row;
   padding: 0 0 50px 200px;
   
 }
-.profile-card {
+.artprofiletab-card {
   margin-left: 20px;
   margin-right: 50px;
   
@@ -21,14 +21,14 @@
   width: 40%;
   padding: 30px;
 }
-.profile-cards {
+.artprofiletab-cards {
   margin-left: 50px;
   margin-right: 20px;
   height: 50%;
   width: 35%;
   padding: 50px;
 }
-.profile-p span{
+.artprofiletab-p span{
   font-weight: 600;
   color: black !important;
 }

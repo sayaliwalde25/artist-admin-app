@@ -13,10 +13,9 @@
   --title-size: 28px;
   --subtitle: 24px;
 }
-
 .artist-container {
   height: 82vh;
-  backdrop-filter: blur(20px);
+  /* backdrop-filter: blur(20px); */
   display: flex;
   border-radius: 30px;
   justify-content: center;
@@ -28,10 +27,8 @@
   /* width: clamp(428%, 990%, 990%); */
   width: 100vw;
   height: 670px;
-  background-color: var(--primary-bg);
-  /* border-radius: 40px; */
-  border: 2px solid var(--accent-bg);
-  /* background-color: #CAF0F8; */
+  /* background-color: var(--primary-bg); */
+  /* border: 2px solid #fff; */
 
   display: grid;
   grid-template-rows: 220px auto;
@@ -39,36 +36,49 @@
 }
 /* ------ profile header section */
 .artist-header {
-  background: url("../images/flo.jpg") center;
+  background: url(../images/pup.png) center;
   background-size: cover;
-  margin: 2px;
-  border-radius: 30px 30px 0 0;
+  /* margin: 2px; */
+  /* border-radius: 30px 30px 0 0; */
   position: relative;
 }
 .artist-profile {
   display: flex;
   align-items: center;
   position: absolute;
-  inset: calc(100% - 75px) auto auto 70px;
+  inset: calc(100% - 75px) 75px auto auto;
 }
 .artist-image {
   width: 150px;
   height: 150px;
-  background: url("../images/card2.jpg") center;
+  /* background: url("../images/card2.jpg") center; */
   background-size: cover;
   border-radius: 50%;
-  border: 5px solid var(--primary-bg);
+  border: 2px solid var(--primary-bg);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 .artist-names {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  color: var(--primary-color);
+  /* justify-content: center; */
+  /* color: var(--primary-color); */
   background-color: var(--primary-bg);
-  padding: 10px 30px;
-  border-radius: 0 50px 50px 0;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  padding: 5px 25px;
+  border-radius: 50px 0px 50px 0;
   transform: translateX(-10px);
 }
 .page-title {
   color: var(--secondary-color);
+}
+.artist-div {
+  display: flex;
+  flex-direction: row;
+}
+/* .artist-h5 { */
+  /* margin-bottom: 100px; */
+/* } */
+.artist-span {
+  margin-bottom: 9px;
+  margin-left: 5px;
 }

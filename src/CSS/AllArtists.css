@@ -54,12 +54,12 @@
 .allart-div:hover .allart-content .allart-details {
   transform: translateY(0px);
 }
-.allart-div .allart-content .allart-details .allart-title {
+.allart-div .allart-content .allart-details .allart-h2 {
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.2em;
 }
-.allart-div .allart-content .allart-details .allart-title .allart-span {
+.allart-div .allart-content .allart-details .allart-h2 .allart-subtitle {
   color: #000;
   font-size: 0.75em;
   font-weight: 500;
@@ -76,22 +76,22 @@
   line-height: 1.2em;
   font-weight: 600;
 } */
-.allart-div .allart-content .allart-details .allart-body .allart-text {
+.allart-div .allart-content .allart-details .allart-body .allart-h3 {
   font-size: 1em;
   line-height: 1.2em;
   font-weight: 600;
 }
-.allart-div .allart-content .allart-details .allart-body .allart-spans {
+.allart-div .allart-content .allart-details .allart-body .allart-text {
   font-size: 0.83em;
   font-weight: 400;
   /* opacity: 0.5; */
   color: #000;
 }
-.allart-div .allart-content .allart-details .actionBtn {
+.allart-div .allart-content .allart-details .allart-footer {
   display: flex;
   justify-content: space-between;
 }
-.allart-div .allart-content .allart-details .actionBtn .allart-button {
+.allart-div .allart-content .allart-details .allart-footer .allart-button {
   padding: 10px 30px;
   border-radius: 5px;
   margin-left: 50px;
@@ -99,11 +99,11 @@
   outline: none;
   font-size: 1em;
   font-weight: 500;
-  background: #ff5f95;
+  background: #8F8FB6;
   color: #fff;
   cursor: pointer;
 }
-.allart-div .allart-content .allart-details .actionBtn .allart-button:nth-child(2) {
+.allart-div .allart-content .allart-details .allart-footer .allart-button:nth-child(2) {
   border: 1px solid #999;
   color: #999;
   background: #fff;
