@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ArtistNavBar from "./ArtistNavBar";
-import AdminDash from "./Components/AdminDash";
-import AllArtists from "./Components/AllArtists";
-import Artist from "./ArtistTab/Artist";
-import ArtistOrderDetails from "./ArtistTab/ArtistOrderDetails";
+import AdminDash from "./AdminDash";
+import AllArtists from "./AllArtists";
+import Artist from "../ArtistTab/Artist";
+import ArtistOrderDetails from "../ArtistTab/ArtistOrderDetails";
 // import ArtistDetails from "./Components/ArtistDetails";
 // import AllCustomers from "./Components/AllCustomers";
-import Customers from "./Components/Customers";
+import Customers from "./Customers";
 
 const ArtistRoutes = () => {
   return (
