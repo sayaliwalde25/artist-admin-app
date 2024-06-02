@@ -15,7 +15,6 @@ const ArtProfileTab = ({ data }) => {
             <Col>
               <img src={`http://localhost:5000${data?.ArtistAdharCardImage}`} />
             </Col>
-            </div>
           </Row>
           <Row className="artprofiletab-p">
             <Col> Handicap Certificate Image:</Col>
@@ -24,7 +23,6 @@ const ArtProfileTab = ({ data }) => {
                 src={`http://localhost:5000${data?.ArtistHandicapCertificateImage}`}
               />
             </Col>
-            </div>
           </Row>
         </Card>
         <Card className="artprofiletab-cards">
