@@ -21,13 +21,15 @@ const ArtWorkTab = () => {
 
   return (
     <div>
-      <h4 className="artworktab-h4">ArtWorkTab</h4>
       <Container>
         <Row>
           {AllArtWorks.map((art) => {
             return (
               <Col sm={12} md={8} lg={4}>
-                <Card className="artworktab-card">
+                <Card
+                  className="artworktab-card"
+                  style={{ marginTop: "10px" }}
+                >
                   <Card.Img
                     className="artworktab-img"
                     src={`http://localhost:5000${art.ArtWorkImage}`}
