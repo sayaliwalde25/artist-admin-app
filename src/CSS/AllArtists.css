@@ -6,25 +6,25 @@
   border-radius: 20px;
   box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
   transition: 0.5s;
-}
+ }
 .allart-div:hover {
-  height: 420px;
+  height: 300px;
 }
 .allart-img {
   position: absolute;
   left: 50%;
   top: -50px;
   transform: translateX(-50%);
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   background: #fff;
   border-radius: 20px;
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
   overflow: hidden;
 }
 .allart-div:hover .allart-img {
-  width: 250px;
-  height: 250px;
+  width: 150px;
+  height: 150px;
 }
 .allart-img .allart-image {
   position: absolute;
@@ -34,6 +34,9 @@
   height: 100%;
   object-fit: cover;
 }
+.allart-content{
+  /* margin-bottom: 150px; */
+}
 .allart-div .allart-content {
   position: absolute;
   width: 100%;
@@ -42,22 +45,30 @@
   justify-content: center;
   align-items: flex-end;
   overflow: hidden;
-  /* margin-bottom: 80%; */
+  /* margin-bottom: 80px; */
 }
 .allart-div .allart-content .allart-details {
   padding: 40px;
   text-align: center;
   width: 100%;
   transition: 0.2s;
-  transform: translateX(150px);
+  transform: translateX(10px);
 }
+/* .allart-details{
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+} */
+
 .allart-div:hover .allart-content .allart-details {
   transform: translateY(0px);
 }
 .allart-div .allart-content .allart-details .allart-h2 {
   font-size: 1.25rem;
   font-weight: 600;
-  line-height: 1.2em;
+  line-height: 1.2rem;
 }
 .allart-div .allart-content .allart-details .allart-h2 .allart-subtitle {
   color: #000;
