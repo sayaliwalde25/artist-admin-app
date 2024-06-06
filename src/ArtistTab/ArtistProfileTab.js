@@ -1,8 +1,25 @@
 import React from "react";
 import "../CSS/ArtProfileTab.css";
 import { Card, Col, Row } from "react-bootstrap";
+import axios from "axios";
 
 const ArtProfileTab = ({ data }) => {
+  
+  const doisApproved = () => {
+    const ApproveData = {
+      ArtistId: data?._id,
+    };
+    axios
+      .post("http://localhost:5000/artapi/doisapprove", ApproveData)
+      .then((result) => {
+        // data(result.data);
+        alert("Approved");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <div>
       {console.log(data)}
@@ -62,6 +79,13 @@ const ArtProfileTab = ({ data }) => {
             <span className="artprofiletab-span">IsVerified: </span>
             {data?.IsVerified}
           </p>
+          <button
+            onClick={() => {
+              doisApproved();
+            }}
+          >
+            Approve
+          </button>
         </Card>
       </div>
     </div>
