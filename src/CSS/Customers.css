@@ -31,8 +31,8 @@
 .allcust-container > .allcust-back {
   position: absolute;
   transform: perspective(600px) rotateY(180deg);
-  background: #3f3885;
-  color: #fff;
+  background: #FAE6FA;
+  color: #000;
   width: 302px;
   height: 290px;
   border-radius: 10px;
