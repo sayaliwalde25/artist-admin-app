@@ -2,29 +2,45 @@ import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../CSS/ArtistNavBar.css";
+import img1 from "../images/Art_visions__1_-removebg-preview.png";
+import DashBoard from "../images/icons8-dashboard-48.png";
+import Customers from "../images/icons8-customers-50.png";
+import Artist from "../images/artist.png";
 
 const ArtistNavBar = () => {
   return (
     <div>
       <Navbar className="artnav-bar" expand="lg">
         <Container>
-          <Navbar.Brand>Artist</Navbar.Brand>
+          <Navbar.Brand className="artnav-brand">
+            <img className="artnav-logo" src={img1} />
+            Art Vision
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="nav-bar" />
           <Navbar.Collapse id="nav-bar">
-            <Nav className="artnav-nav">
-              <Nav.Link>
-                <Link className="artnav-link" to="/">
-                  <div className="artnav-div">DashBoard</div>
+            <Nav className="me-auto artnav-nav">
+              <Nav.Link className="artnav-link">
+                <Link className="artnav-links" to="/">
+                  {/* <div className="artnav-div"> */}
+                  <img className="artnav-icon" src={DashBoard} />
+                  DashBoard
+                  {/* </div> */}
                 </Link>
               </Nav.Link>
-              <Nav.Link>
-                <Link className="artnav-link" to="/customers">
-                  <div className="artnav-div">AllCustomers</div>
+              <Nav.Link className="artnav-link">
+                <Link className="artnav-links" to="/customers">
+                  {/* <div className="artnav-div"> */}
+                  <img className="artnav-icon" src={Customers} />
+                  AllCustomers
+                  {/* </div> */}
                 </Link>
               </Nav.Link>
-              <Nav.Link>
-                <Link className="artnav-link" to="/allartists">
-                  <div className="artnav-div">AllArtists</div>
+              <Nav.Link className="artnav-link">
+                <Link className="artnav-links" to="/allartists">
+                  {/* <div className="artnav-div"> */}
+                  <img className="artnav-icon" src={Artist} />
+                  AllArtists
+                  {/* </div> */}
                 </Link>
               </Nav.Link>
             </Nav>
