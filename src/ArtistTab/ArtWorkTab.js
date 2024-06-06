@@ -4,7 +4,7 @@ import { Card, Col, Container, Row } from "react-bootstrap";
 import "../CSS/ArtWorkTab.css";
 import { useLocation } from "react-router-dom";
 
-const ArtWorkTab = ({ data }) => {
+const ArtWorkTab = () => {
   // AllArtWorks
   const [AllArtWorks, setAllArtWorks] = useState([]);
   const artistData = useLocation().state;
@@ -27,7 +27,7 @@ const ArtWorkTab = ({ data }) => {
       <h5></h5>
       <Container>
         <Row>
-          {AllArtWorks.map((art) => {
+          {artistData?.data?.map((art) => {
             return (
               <Col sm={12} md={8} lg={4}>
                 <Card className="artworktab-card" style={{ marginTop: "10px" }}>
