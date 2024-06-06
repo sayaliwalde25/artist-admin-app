@@ -27,7 +27,7 @@ const ArtWorkTab = () => {
       <h5></h5>
       <Container>
         <Row>
-          {artistData?.data?.map((art) => {
+          {artistData?.map((art) => {
             return (
               <Col sm={12} md={8} lg={4}>
                 <Card className="artworktab-card" style={{ marginTop: "10px" }}>
