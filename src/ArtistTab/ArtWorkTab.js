@@ -6,7 +6,7 @@ import { useLocation } from "react-router-dom";
 
 const ArtWorkTab = () => {
   // AllArtWorks
-  const [AllArtWorks, setAllArtWorks] = useState([]);
+  // const [AllArtWorks, setAllArtWorks] = useState([]);
   const artistData = useLocation().state;
 
   // AllArtWorks
