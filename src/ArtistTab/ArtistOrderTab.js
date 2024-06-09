@@ -4,10 +4,10 @@ import { Card, Col, Container, Modal, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import "../CSS/ArtOrderTab.css";
 
-const ArtOrderTab = () => {
+const ArtistOrderTab = () => {
   // ArtOrders
   const [ArtOrders, setArtOrders] = useState([]);
-  const [onShowDelete, setonShowDelete] = useState(false);
+  // const [onShowDelete, setonShowDelete] = useState(false);
 
   const navigator = useNavigate();
 
@@ -48,19 +48,19 @@ const ArtOrderTab = () => {
                     <button
                       className="artordertab-button"
                       onClick={() =>
-                        navigator("/artorderdetails", { state: order })
+                        navigator("/artistorderdetails", { state: order })
                       }
                     >
                       OrderDetails
                     </button>
-                    <button
+                    {/* <button
                       className="artorder-button"
                       onClick={() => {
                         onShowDelete(true);
                       }}
                     >
                       Delete
-                    </button>
+                    </button> */}
                   </div>
                 </Card>
               </Col>
@@ -70,7 +70,7 @@ const ArtOrderTab = () => {
       </Container>
 
       {/* Delete */}
-      <Modal show={onShowDelete} onHide={() => setonShowDelete(false)}>
+      {/* <Modal show={onShowDelete} onHide={() => setonShowDelete(false)}>
         <Modal.Header closeButton>
           <Modal.Title>Order Delete</Modal.Title>
         </Modal.Header>
@@ -86,9 +86,9 @@ const ArtOrderTab = () => {
             No
           </button>
         </Modal.Footer>
-      </Modal>
+      </Modal> */}
     </div>
   );
 };
 
-export default ArtOrderTab;
+export default ArtistOrderTab;
