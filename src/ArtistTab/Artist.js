@@ -10,7 +10,7 @@ const Artist = () => {
   const artistData = useLocation().state;
 
   return (
-    <div style={{ marginTop: "130px",
+    <div style={{ marginTop: "109px",
     //  marginLeft:'2px' 
      }}>
       <div className="artist-container">
