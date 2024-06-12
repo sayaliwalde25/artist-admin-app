@@ -79,7 +79,7 @@ const ArtProfileTab = ({ data }) => {
             <span className="artprofiletab-span">IsVerified: </span>
             {data?.IsVerified}
           </p>
-          <button
+          <button className="artistprofiletab-button"
             onClick={() => {
               doisApproved();
             }}

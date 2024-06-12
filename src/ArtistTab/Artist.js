@@ -2,9 +2,10 @@ import React from "react";
 import { Tab, Tabs } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 import ArtWorkTab from "../ArtistTab/ArtWorkTab";
-import ArtistOrderTab from "../ArtistTab/ArtistOrderTab";
 import ArtistProfileTab from "../ArtistTab/ArtistProfileTab";
 import "../CSS/Artist.css";
+import OrderTab from "./OrderTab";
+import ArtistOrderTab from "./ArtistOrderTab";
 
 const Artist = () => {
   const artistData = useLocation().state;
@@ -13,7 +14,6 @@ const Artist = () => {
     <div
       style={{
         marginTop: "109px",
-        //  marginLeft:'2px'
       }}
     >
       <div className="artist-container">
@@ -31,6 +31,7 @@ const Artist = () => {
               <img
                 className="artist-image"
                 src={`http://localhost:5000${artistData?.ArtistProfile}`}
+                alt="Artist Profile"
               />
             </div>
           </div>

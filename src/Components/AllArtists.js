@@ -32,7 +32,7 @@ const AllArtists = () => {
           <Row>
             {allArtists.map((artist) => {
               return (
-                <Col>
+                <Col sm={12} md={9} lg={4}>
                   <div className="allart-div" style={{marginBottom:"80px"}}>
                     <div className="allart-img">
                       <Card.Img

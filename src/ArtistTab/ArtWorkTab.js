@@ -1,13 +1,12 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Card, Col, Container, Row } from "react-bootstrap";
+import { Card, Col } from "react-bootstrap";
 import "../CSS/ArtWorkTab.css";
 
 const ArtWorkTab = ({ data }) => {
   const [AllArtWorks, setAllArtWorks] = useState([]);
 
-  // AllArtWorks
-  useEffect = () => {
+  useEffect(() => {
     axios
       .post("http://localhost:5000/artapi/getartworksbyartistid", {
         ArtistId: data?._id,
@@ -19,26 +18,30 @@ const ArtWorkTab = ({ data }) => {
       .catch((err) => {
         console.log(err);
       });
-  };
+  }, [data]);
+
   return (
     <div>
       <h5>ArtWorkTab</h5>
-        {AllArtWorks.map((art) => {
-          return (
-            <Col sm={12} md={9} lg={3}>
+      {AllArtWorks.length > 0 ? (
+        AllArtWorks.map((art, index) => (
+          <Col sm={12} md={9} lg={3} key={index}>
             <Card className="artworktab-card">
               <Card.Img
                 className="artworktab-img"
                 src={`http://localhost:5000${art.ArtWorkImage}`}
+                alt="Artwork"
               />
               <Card.Body>
                 <Card.Text>Name: {art.ArtWorkName}</Card.Text>
                 <Card.Text>Type: {art.ArtWorkType}</Card.Text>
               </Card.Body>
             </Card>
-            </Col>
-          );
-        })}
+          </Col>
+        ))
+      ) : (
+        <p>No artworks found.</p>
+      )}
     </div>
   );
 };
