@@ -29,7 +29,7 @@ const Artist = () => {
                 <small className="page-title"></small>
               </div>
               <img
-                className="artist-image"
+                className="artist-img"
                 src={`http://localhost:5000${artistData?.ArtistProfile}`}
                 alt="Artist Profile"
               />
