@@ -23,18 +23,22 @@ const ArtWorkTab = ({ data }) => {
   return (
     <div>
       <h5>ArtWorkTab</h5>
-      <Col sm={12} md={9} lg={3}>
         {AllArtWorks.map((art) => {
           return (
+            <Col sm={12} md={9} lg={3}>
             <Card className="artworktab-card">
               <Card.Img
                 className="artworktab-img"
                 src={`http://localhost:5000${art.ArtWorkImage}`}
               />
+              <Card.Body>
+                <Card.Text>Name: {art.ArtWorkName}</Card.Text>
+                <Card.Text>Type: {art.ArtWorkType}</Card.Text>
+              </Card.Body>
             </Card>
+            </Col>
           );
         })}
-      </Col>
     </div>
   );
 };
