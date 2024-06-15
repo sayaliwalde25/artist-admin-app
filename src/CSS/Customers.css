@@ -1,26 +1,26 @@
-.allcust-container {
+.cust-container {
   width: 302px;
   height: 299px;
   margin: 10px;
   float: left;
 }
-.allcust-img {
+.cust-img {
   /* border-radius: 10px; */
   height: 250px;
   width: 300px;
 }
-.allcust-text {
+.cust-text {
   /* position: absolute; */
   top: 50px;
   font-size: 15px;
 }
-.allcust-title {
+.cust-title {
   /* position: absolute; */
   /* padding: 10px; */
   /* top: 200px; */
   color: #000;
 }
-.allcust-container > .allcust-front {
+.cust-container > .cust-front {
   position: absolute;
   transform: perspective(600px) rotateY(0deg);
   width: 302px;
@@ -28,11 +28,11 @@
   backface-visibility: hidden;
   transition: transform 0.5s linear 0s;
 }
-.allcust-container > .allcust-back {
+.cust-container > .cust-back {
   position: absolute;
   transform: perspective(600px) rotateY(180deg);
-  background: #FAE6FA;
-  color: #000;
+  background: #8d5aa2;
+  color: #fff;
   width: 302px;
   height: 290px;
   border-radius: 10px;
@@ -40,9 +40,25 @@
   backface-visibility: hidden;
   transition: transform 0.5s linear 0s;
 }
-.allcust-container:hover > .allcust-front {
+.cust-container:hover > .cust-front {
   transform: perspective(600px) rotateY(-180deg);
 }
-.allcust-container:hover > .allcust-back {
+.cust-container:hover > .cust-back {
   transform: perspective(600px) rotateY(0deg);
+}
+.cust-delete {
+  background: linear-gradient(0deg, rgb(198, 79, 79), rgb(246, 84, 84))
+    no-repeat left bottom / 0 20px;
+  transition: background-size 350ms;
+  --bg-h: 100%;
+
+  /* margin-right: 5px; */
+  margin-bottom: 2px;
+  border: 2px solid black;
+  padding: 5px;
+  font-size: 28px;
+}
+.cust-delete:where(:hover, :focus-visible) {
+  background-size: 100% 25px;
+  background-position-x: right;
 }
