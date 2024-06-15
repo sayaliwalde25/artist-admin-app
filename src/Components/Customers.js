@@ -99,8 +99,29 @@ const Customers = () => {
           <h4>Are you sure you want to delete this artworks?</h4>
         </Modal.Body>
         <Modal.Footer>
-          <BiCheck style={{border:'2px solid green',color:'white',background:'green',borderRadius:'50%',marginRight:'10px'}} onClick={() => doDelete()}>Yes</BiCheck>
-          <MdCancel style={{border:'1px solid red',color:'white',background:'red',borderRadius:'50%'}} onClick={() => setshowDelete(false)}>No</MdCancel>
+          <BiCheck
+            style={{
+              border: "2px solid green",
+              color: "white",
+              background: "green",
+              borderRadius: "50%",
+              marginRight: "10px",
+            }}
+            onClick={() => doDelete()}
+          >
+            Yes
+          </BiCheck>
+          <MdCancel
+            style={{
+              border: "1px solid red",
+              color: "white",
+              background: "red",
+              borderRadius: "50%",
+            }}
+            onClick={() => setshowDelete(false)}
+          >
+            No
+          </MdCancel>
         </Modal.Footer>
       </Modal>
     </div>
