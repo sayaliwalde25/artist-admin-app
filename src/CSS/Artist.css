@@ -68,7 +68,7 @@
   border-radius: 50px 0px 50px 0;
   transform: translateX(-10px);
 }
-.page-title {
+.artist-title {
   color: var(--secondary-color);
 }
 .artist-div {
@@ -76,7 +76,7 @@
   flex-direction: row;
 }
 /* .artist-h5 { */
-  /* margin-bottom: 100px; */
+/* margin-bottom: 100px; */
 /* } */
 .artist-span {
   margin-bottom: 9px;

@@ -21,12 +21,12 @@ const Artist = () => {
           <div className="artist-header">
             <div className="artist-profile">
               <div className="artist-names">
-                <h1 className="username">
+                <h1 className="artist-username">
                   <h4 style={{ marginLeft: "10px" }}>
                     {artistData?.ArtistFullName}
                   </h4>
                 </h1>
-                <small className="page-title"></small>
+                <small className="artist-title"></small>
               </div>
               <img
                 className="artist-img"

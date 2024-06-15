@@ -17,14 +17,13 @@ const ArtistOrderTab = ({ data }) => {
       .catch((err) => {
         console.log(err);
       });
-    // console.log("hello")
   });
 
   return (
     <div>
       <h4>ArtistOrderTab</h4>
       {ArtistOrders.map((order) => {
-        <h4>{order.OrderDate}</h4>;
+        <h5>{order.OrderDate}</h5>
       })}
     </div>
   );

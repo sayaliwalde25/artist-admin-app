@@ -22,7 +22,7 @@ const ArtWorkTab = ({ data }) => {
 
   return (
     <div>
-      <h5>ArtWorkTab</h5>
+      {/* <h5>ArtWorkTab</h5> */}
       {AllArtWorks.length > 0 ? (
         AllArtWorks.map((art, index) => (
           <Col sm={12} md={9} lg={3} key={index}>

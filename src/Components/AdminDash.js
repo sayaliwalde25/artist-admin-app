@@ -6,7 +6,7 @@ import order from "../images/icons8-order-30.png";
 import customer from "../images/icons8-customer-50.png";
 import contact from "../images/icons8-contact-50.png";
 
-const AdminDash = () => {
+const AdminDash = (data) => {
   return (
     <div style={{ marginTop: "50px" }}>
       <div className="admin-container">
