@@ -9,11 +9,11 @@ const ArtWorkTab = ({ data }) => {
   useEffect(() => {
     axios
       .post("http://localhost:5000/artapi/getartworksbyartistid", {
-        ArtistId: data?._id,
+        ArtistId: data?.ArtistId?._id,
       })
       .then((result) => {
-        console.log(result.data);
-        setAllArtWorks(result.data);
+        console.log(result.data?.data);
+        setAllArtWorks(result.data?.data);
       })
       .catch((err) => {
         console.log(err);
@@ -23,7 +23,7 @@ const ArtWorkTab = ({ data }) => {
   return (
     <div>
       {/* <h5>ArtWorkTab</h5> */}
-      {AllArtWorks.length > 0 ? (
+      {/* {AllArtWorks.length > 0 ? (
         AllArtWorks.map((art, index) => (
           <Col sm={12} md={9} lg={3} key={index}>
             <Card className="artworktab-card">
@@ -41,7 +41,8 @@ const ArtWorkTab = ({ data }) => {
         ))
       ) : (
         <p>No artworks found.</p>
-      )}
+      )} */}
+      <h4>{data?.ArtWorkName}</h4>
     </div>
   );
 };

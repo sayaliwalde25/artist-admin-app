@@ -19,8 +19,6 @@ const ArtistRoutes = () => {
           <Route path="/allartists" element={<AllArtists />} />
           <Route path="/artist" element={<Artist />} />
           <Route path="/artistorderdetails" element={<ArtistOrderDetails />} />
-          {/* <Route path="/artisitdetails" element={<ArtistDetails />} /> */}
-          {/* <Route path="/allcustomers" element={<AllCustomers />} /> */}
           <Route path="/customers" element={<Customers />} />
         </Routes>
       </BrowserRouter>

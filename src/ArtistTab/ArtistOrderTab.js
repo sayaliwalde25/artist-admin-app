@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Card, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
-const ArtistOrderTab = ({ data }) => {
+const ArtistOrderTab = () => {
   const [ArtistOrders, setArtistOrders] = useState([]);
   const navigator = useNavigate();
 
@@ -22,9 +22,9 @@ const ArtistOrderTab = ({ data }) => {
   return (
     <div>
       <h4>ArtistOrderTab</h4>
-      {ArtistOrders.map((order) => {
+      {/* {ArtistOrders.map((order) => {
         <Card>{order.OrderDate}</Card>
-      })}
+      })} */}
     </div>
   );
 };
