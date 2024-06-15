@@ -94,11 +94,13 @@ const Customers = () => {
       </Container>
       {/* Delete */}
       <Modal show={showDelete} onHide={() => setshowDelete(false)}>
-        <Modal.Header closeButton>Delete ArtWorks</Modal.Header>
-        <Modal.Body>
+        <Modal.Header style={{ backgroundColor: "#cdb4db" }} closeButton>
+          Delete ArtWorks
+        </Modal.Header>
+        <Modal.Body style={{ backgroundColor: "#cdb4db" }}>
           <h4>Are you sure you want to delete this artworks?</h4>
         </Modal.Body>
-        <Modal.Footer>
+        <Modal.Footer style={{ backgroundColor: "#cdb4db" }}>
           <BiCheck
             style={{
               border: "2px solid green",
