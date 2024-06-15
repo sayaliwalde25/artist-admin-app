@@ -23,7 +23,7 @@ const ArtistOrderTab = ({ data }) => {
     <div>
       <h4>ArtistOrderTab</h4>
       {ArtistOrders.map((order) => {
-        <h5>{order.OrderDate}</h5>
+        <Card>{order.OrderDate}</Card>
       })}
     </div>
   );
