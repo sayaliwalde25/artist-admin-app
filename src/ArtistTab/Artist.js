@@ -4,7 +4,6 @@ import { useLocation } from "react-router-dom";
 import ArtWorkTab from "../ArtistTab/ArtWorkTab";
 import ArtistProfileTab from "../ArtistTab/ArtistProfileTab";
 import "../CSS/Artist.css";
-import OrderTab from "./OrderTab";
 import ArtistOrderTab from "./ArtistOrderTab";
 
 const Artist = () => {
