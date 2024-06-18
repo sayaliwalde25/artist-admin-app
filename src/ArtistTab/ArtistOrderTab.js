@@ -3,16 +3,18 @@ import React, { useEffect, useState } from "react";
 import { Card, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
-const ArtistOrderTab = () => {
+const ArtistOrderTab = ({ data }) => {
   const [ArtistOrders, setArtistOrders] = useState([]);
   const navigator = useNavigate();
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/artapi/allorders")
+      .post("http://localhost:5000/artapi/ordersbycustid", {
+        CustId: data?._id,
+      })
       .then((result) => {
-        setArtistOrders(result.data);
-        console.log(result.data);
+        setArtistOrders(result.data.data);
+        console.log("Data", result.data);
       })
       .catch((err) => {
         console.log(err);
@@ -22,9 +24,7 @@ const ArtistOrderTab = () => {
   return (
     <div>
       <h4>ArtistOrderTab</h4>
-      {/* {ArtistOrders.map((order) => {
-        <Card>{order.OrderDate}</Card>
-      })} */}
+      {/* Id:{data?._id} */}
     </div>
   );
 };

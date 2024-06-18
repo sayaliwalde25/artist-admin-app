@@ -7,14 +7,15 @@ import { BiCheck } from "react-icons/bi";
 
 const Customers = () => {
   // AllCustomers
-  const [allCustomers, setallCustomers] = useState([]);
+  const [AllCustomers, setAllCustomers] = useState([]);
 
   // AllCustomers
   useEffect(() => {
     axios
       .get("http://localhost:5000/artapi/allcustomers")
       .then((result) => {
-        setallCustomers(result.data);
+        setAllCustomers(result.data);
+        console.log(result.data)
       })
       .catch((err) => {
         console.log(err);
@@ -25,14 +26,14 @@ const Customers = () => {
   const [selectedArtWorks, setselectedArtWorks] = useState([]);
   const doDelete = () => {
     let artworkIdDelete = {
-      artworkid: selectedArtWorks._id,
+      CustId: selectedArtWorks._id,
     };
     axios
-      .delete("http://localhost:5000/artapi/deleteartwork", {
+      .delete("http://localhost:5000/artapi/deletecustomer", {
         data: artworkIdDelete,
       })
       .then((result) => {
-        console.log(result);
+        console.log(result.data);
         setshowDelete(false);
       })
       .catch((err) => {
@@ -44,7 +45,7 @@ const Customers = () => {
       <h6>Customers</h6>
       <Container>
         <Row>
-          {allCustomers.map((cust) => {
+          {AllCustomers.map((cust) => {
             return (
               <Col sm={12} md={8} lg={4}>
                 <div className="cust-container">
@@ -95,7 +96,7 @@ const Customers = () => {
       {/* Delete */}
       <Modal show={showDelete} onHide={() => setshowDelete(false)}>
         <Modal.Header style={{ backgroundColor: "#cdb4db" }} closeButton>
-          Delete ArtWorks
+          <h5 style={{ fontSize: "21px" }}>Delete ArtWorks</h5>
         </Modal.Header>
         <Modal.Body style={{ backgroundColor: "#cdb4db" }}>
           <h4>Are you sure you want to delete this artworks?</h4>

@@ -10,11 +10,7 @@ const Artist = () => {
   const artistData = useLocation().state;
 
   return (
-    <div
-      style={{
-        marginTop: "109px",
-      }}
-    >
+    <div style={{ marginTop: "109px" }}>
       <div className="artist-container">
         <div className="artist-card">
           <div className="artist-header">
@@ -34,7 +30,7 @@ const Artist = () => {
               />
             </div>
           </div>
-          <div style={{ marginTop: "30px" }}>
+          <div style={{ marginTop: "30px", marginLeft: "5px" }}>
             <Tabs id="uncontrolled-tab-example" defaultActiveKey="ArtWork">
               <Tab eventKey="ArtWork" title="ArtWork">
                 <ArtWorkTab data={artistData} />
