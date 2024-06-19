@@ -2,14 +2,15 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Card, Col, Row } from "react-bootstrap";
 import "../CSS/ArtWorkTab.css";
+import { useNavigate } from "react-router-dom";
 
 const ArtWorkTab = ({ data }) => {
   const [AllArtWorks, setAllArtWorks] = useState([]);
-
+  const navigator = useNavigate();
   useEffect(() => {
     axios
       .post("http://localhost:5000/artapi/getartworksbyartistid", {
-        ArtistId: data?._id,
+        ArtistId: data?.ArtistProfile?._id,
       })
       .then((result) => {
         console.log(result.data);
@@ -28,15 +29,15 @@ const ArtWorkTab = ({ data }) => {
           return (
             <Col sm={12} md={9} lg={3}>
               <Card className="artworktab-card">
-                <div className="artworktab-image">
-                  <Card.Img
-                    className="artworktab-img"
-                    src={`http://localhost:5000${art.ArtWorkImage}`}
-                  />
-                </div>
+                {/* <div className="artworktab-image"> */}
+                <Card.Img
+                  className="artworktab-img"
+                  src={`http://localhost:5000${art.ArtWorkImage}`}
+                />
+                {/* </div> */}
                 <Card.Body>
                   <Card.Text>Name: {art.ArtWorkName}</Card.Text>
-                  <Card.Text>Price: &#8377;{art.ArtWorkPrice}</Card.Text>
+                  <Card.Text>Price: &#8377; {art.ArtWorkPrice}</Card.Text>
                 </Card.Body>
               </Card>
             </Col>
