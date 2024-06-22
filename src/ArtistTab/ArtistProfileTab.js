@@ -69,7 +69,7 @@ const ArtProfileTab = ({ data }) => {
           </p>
           <p className="artprofiletab-pp">
             <span className="artprofiletab-span">Pin Code: </span>
-            {data?.ArtistPincode}
+            {data?.ArtistPinCode}
           </p>
           <p className="artprofiletab-pp">
             <span className="artprofiletab-span">Adhar Card No:</span>

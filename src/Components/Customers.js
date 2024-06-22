@@ -15,7 +15,7 @@ const Customers = () => {
       .get("http://localhost:5000/artapi/allcustomers")
       .then((result) => {
         setAllCustomers(result.data);
-        console.log(result.data)
+        console.log(result.data);
       })
       .catch((err) => {
         console.log(err);
@@ -23,7 +23,7 @@ const Customers = () => {
   }, []);
   // Delete
   const [showDelete, setshowDelete] = useState(false);
-  const [selectedArtWorks, setselectedArtWorks] = useState([]);
+  const [selectedArtWorks, setselectedArtWorks] = useState({});
   const doDelete = () => {
     let artworkIdDelete = {
       CustId: selectedArtWorks._id,
@@ -40,6 +40,7 @@ const Customers = () => {
         console.log(err);
       });
   };
+  
   return (
     <div style={{ marginTop: "80px" }}>
       <h6>Customers</h6>
