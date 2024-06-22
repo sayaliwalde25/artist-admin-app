@@ -11,7 +11,7 @@ const ArtistNavBar = () => {
   return (
     <div>
       <Navbar className="artnav-bar" expand="lg">
-        <Container>
+        <Container> 
           <Navbar.Brand className="artnav-brand">
             <img className="artnav-logo" src={img1} />
             Art Vision
