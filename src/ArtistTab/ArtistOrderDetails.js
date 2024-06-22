@@ -11,8 +11,8 @@ const ArtOrderDetails = () => {
   // useEffect
   useEffect(() => {
     axios
-      .post("http://localhost:5000/artapi/orderbyid", {
-        orderid: orderData._id,
+      .post("http://localhost:5000/artapi/ordersbycustid", {
+        CustId: orderData?._id,
       })
       .then((result) => {
         setorderDetails(result.data.data);
@@ -32,7 +32,7 @@ const ArtOrderDetails = () => {
         >
           Order Id:
         </span>
-        {orderData._id}
+        {/* {orderData._id} */}
       </p>
       <div> 
         <div>
@@ -52,13 +52,13 @@ const ArtOrderDetails = () => {
         </div>
         <div className="artorderdetails-divv"></div>
         {/* <div className="orderdetails-divs"> */}
-        {orderData.OrderItems.map((order) => {
+        {orderData?.OrderItems.map((order) => {
           return (
             <div className="artorderdetails-card">
               <span>
                 <img
                   className="artorderdetails-img"
-                  src={`http://localhost:5000${order.ArtWorkId.ArtWorkImage}`}
+                  src={`http://localhost:5000${order.ArtWorkId?.ArtWorkImage}`}
                 />
               </span>
               <span>{order.Qty}</span>

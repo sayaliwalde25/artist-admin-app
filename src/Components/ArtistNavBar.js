@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../CSS/ArtistNavBar.css";
-import img1 from "../images/Art_visions__1_-removebg-preview.png";
+import img1 from "../images/nav-removebg-preview.png";
 import DashBoard from "../images/icons8-dashboard-48.png";
 import Customers from "../images/icons8-customers-50.png";
 import Artist from "../images/artist.png";
@@ -13,8 +13,10 @@ const ArtistNavBar = () => {
       <Navbar className="artnav-bar" expand="lg">
         <Container> 
           <Navbar.Brand className="artnav-brand">
-            <img className="artnav-logo" src={img1} />
-            Art Vision
+            <div style={{ display: "flex", marginTop: "30px" }}>
+              <img className="artnav-logo" src={img1} />
+              <div className="artnav-div">Art Vision</div>
+            </div>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="nav-bar" />
           <Navbar.Collapse id="nav-bar">
