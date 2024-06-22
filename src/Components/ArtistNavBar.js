@@ -11,7 +11,7 @@ const ArtistNavBar = () => {
   return (
     <div>
       <Navbar className="artnav-bar" expand="lg">
-        <Container>
+        <Container> 
           <Navbar.Brand className="artnav-brand">
             <div style={{ display: "flex", marginTop: "30px" }}>
               <img className="artnav-logo" src={img1} />
